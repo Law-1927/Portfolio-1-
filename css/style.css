@@ -1040,13 +1040,38 @@ h1 {
   }
 
   .footer-content {
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem clamp(0.75rem, 4vw, 1.5rem);
     padding-block: 1.25rem;
   }
 
   .footer-content > p:first-of-type {
     display: none;
+  }
+
+  .footer-content .brand {
+    gap: clamp(0.35rem, 1.8vw, 0.7rem);
+    font-size: clamp(0.78rem, 3.2vw, 0.9rem);
+  }
+
+  .footer-content .brand-mark {
+    width: clamp(24px, 6.2vw, 36px);
+    flex: 0 0 auto;
+    border-radius: clamp(7px, 1.9vw, 11px);
+    font-size: 0.85em;
+  }
+
+  .footer-content .footer-links {
+    justify-content: center;
+    gap: 0.5rem clamp(0.65rem, 3vw, 1rem);
+  }
+
+  .footer-content .copyright {
+    grid-column: 1 / -1;
+    text-align: center;
   }
 }
 
@@ -1070,20 +1095,17 @@ h1 {
   }
 
   .footer-content {
-    justify-content: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
   }
 
-  .footer-content .brand {
-    gap: clamp(0.4rem, 2vw, 0.7rem);
-    font-size: clamp(0.75rem, 4vw, 0.9rem);
+  .footer-content .footer-links {
+    justify-content: center;
   }
 
-  .footer-content .brand-mark {
-    width: clamp(28px, 8vw, 36px);
-    flex: 0 0 auto;
-    border-radius: clamp(8px, 2vw, 11px);
-    font-size: 0.85em;
+  .footer-content .copyright {
+    grid-column: auto;
   }
 }
 
