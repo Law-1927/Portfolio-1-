@@ -1073,6 +1073,18 @@ h1 {
     justify-content: center;
     text-align: center;
   }
+
+  .footer-content .brand {
+    gap: clamp(0.4rem, 2vw, 0.7rem);
+    font-size: clamp(0.75rem, 4vw, 0.9rem);
+  }
+
+  .footer-content .brand-mark {
+    width: clamp(28px, 8vw, 36px);
+    flex: 0 0 auto;
+    border-radius: clamp(8px, 2vw, 11px);
+    font-size: 0.85em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
